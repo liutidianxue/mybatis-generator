@@ -44,11 +44,14 @@
         </javaClientGenerator>
 
         <!--table是指定每个表的生成策略 生成对应表及类名-->
-        <table tableName="t_user" domainObjectName="User"></table>
+        <!--<table tableName="t_user" domainObjectName="User"></table>
         <table tableName="t_admin" domainObjectName="Admin"></table>
         <table tableName="t_menu" domainObjectName="Menu"></table>
         <table tableName="t_order" domainObjectName="Order"></table>
-        <table tableName="t_type" domainObjectName="Type"></table>
+        <table tableName="t_type" domainObjectName="Type"></table>-->
+
+        <!-- 这样不用像上面那个一个一个写出来，自动匹配所有，不过类的名字会有变化，变成  XXxxxx  t_aaa_bbb->TAxxBxx -->
+        <table schema="" tableName="%"></table>
 
     </context>
 </generatorConfiguration>
